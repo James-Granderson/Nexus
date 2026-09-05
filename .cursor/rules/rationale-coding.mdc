@@ -1,0 +1,34 @@
+---
+description: Rationale coding — think before you type
+alwaysApply: true
+---
+
+# Rationale Coding
+
+Rationale coding is the Nexus development method: **define what things mean before writing code**.
+
+Vibe coding adds classes that compile. Rationale coding adds classes that **mean something** when the simulation grows.
+
+## Process
+
+1. **Ask what must be true** — What is "reality" in this sim? What is undefined?
+2. **Separate concerns** — Which concepts belong to which layer? (e.g. court vs arena)
+3. **Defer only explicitly** — Unknown is fine; mark it (`None`, optional) instead of pretending it doesn't exist
+4. **Then implement** — Code should mirror the agreed model, not invent one mid-file
+
+## Nexus Example
+
+| Question | Rationale | Result |
+|----------|-----------|--------|
+| Does a player float? | No floor defined → 2D is incomplete | Add `z` |
+| Where is the floor? | Playing surface, not the building | `Court.floor_z` |
+| What about the ceiling? | Arena property, rarely affects play | `Arena.ceiling_z` (optional) |
+| Default player height? | On the court floor | `Player.z` defaults to `court.floor_z` |
+
+## Rules
+
+- Do not add coordinates, fields, or classes until their **role in the model** is clear
+- Prefer **one home per concept** — floor on court, ceiling on arena
+- When unsure, **discuss and decide** — then write the smallest correct diff
+- Small coherent architecture beats large ambiguous code
+- Don't even think to write code until you've laid out your plan and assumptions
