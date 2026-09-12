@@ -47,11 +47,11 @@ Because the choice has disappeared, six months later you have:
 
 *Methods you never personally evaluated*
 
-This outcome is code decay. Code decay is not caused by bad syntax; it is caused by unevaluated choices.
+This outcome is code decay. You do not end up with code decay because of bad syntax. You end up with code decay because of unevaluated choices.
 
-The rationale loop replaces passive copying with active engineering by forcing you through a sequence of deliberate decisions before code ever enters the architecture.
+The rationale loop on the other hand replaces passive copying with active engineering by forcing you through a sequence of deliberate decisions before code ever enters the architecture.
 
-It begins with the problem itself, stripped of syntax or framework assumptions. Rather than grabbing the first available answer, you identify the possible moves and see what each move does. This means mapping out your options and testing how each candidate approach interacts with system memory, state ownership, and execution flow.
+It begins with the problem itself, stripped of syntax or framework assumptions. Rather than grabbing the first available answer, you carefully identify the possible moves and see what each move does. This means mapping out your options and testing how each candidate approach interacts with system memory, state ownership, and execution flow.
 
 You then understand the consequences of those options—evaluating trade-offs in complexity, lifetime, and performance—so that when you make a choice, it is an intentional act of design rather than an accident of generation. You justify that choice by explicitly defining why this approach fits the physical model and what breaks if it is omitted.
 
