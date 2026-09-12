@@ -28,11 +28,14 @@ Ask and answer these questions before writing code. Verify them after writing co
 
 The key mechanism behind rationale coding, and why it works, is the fact that you decide.
 When you "vibe code" or copy paste answers from Google or someone else, you are handing the decision off
-to someone else. You are no longer in the driver seat. You lose control over what you were actually trying to implement.
+to someone else. 
+
+You are no longer in the driver seat. You lose control over what you were actually trying to implement.
 Take for example a fight. You wouldn't take a random weapon and head off with it into battle would you? You'd make the choice
 of taking a sword or knife yourself depending on your situation. That is rationale coding. You decide. You do it yourself. And 
 Eventually, you become wiser and sharper than any knife. You choose. You win.
-The bad loop is:
+
+The bad loop you get is:
 Question
    ↓
 AI gives implementation
@@ -44,14 +47,17 @@ Compile
 Move on
 
 Because the choice has disappeared.
+
 And then six months later you’ve got:
+
 code you didn't choose
 + abstractions you don't understand
 + dependencies you don't remember
 + conventions you never evaluated
 = decay
 
-The rationale loop should instead be
+The rationale loop should instead be:
+
 PROBLEM
    ↓
 WHAT ARE THE POSSIBLE MOVES?
