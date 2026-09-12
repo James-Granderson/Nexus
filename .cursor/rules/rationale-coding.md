@@ -170,7 +170,7 @@ Use the isolated experiment as physical evidence for architectural decisions. Tr
 * Do not add syntax merely because it is conventional.
 * Do not introduce an abstraction that cannot be explained.
 * Keep one home per concept (floor on court, ceiling on arena).
-* Discuss and decide when unsure, then write the smallest correct diff.
+* Discuss and decide when unsure, then write the smallest correction.
 * Do not move past a concept merely because the code compiles.
 * Isolate and experiment with important or unfamiliar concepts.
 * Inspect memory, ownership, references, and lifetime when they affect the concept.
