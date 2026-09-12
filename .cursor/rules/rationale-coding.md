@@ -4,7 +4,7 @@ Rationale coding is the Nexus development method. It defines what things mean be
 
 To understand rationale coding, consider its alternative: vibe coding. Vibe coding relies on prompting and immediate syntax generation from artificial intelligence tools. The developer asks a tool for code, accepts output that looks reasonable, and runs it until the error messages disappear. You hand off the entire design process to the LLM.
 
-With vibe coding you can produce classes that compile, yes. But with rationale coding you produce classes that actually mean something when the simulation grows.
+With vibe coding you can produce classes that compile. With rationale coding you produce classes that actually mean something when the simulation grows, and develop good practice.
 
 Vibe coding accelerates syntax generation, but it defers architectural truth. When a simulation expands, vibe-coded architecture collapses under unexamined assumptions, and a disconnect between programmer and AI intention.
 
