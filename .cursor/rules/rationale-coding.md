@@ -109,6 +109,8 @@ If any answer is no, stop and resolve the discrepancy before writing more code.
 
 ### Experiment Before Abstraction
 
+Never test an unfamiliar concept, feature, or memory mutation directly on the main project object. Modifying live structures risks collateral state corruption and hides side effects.
+
 Create an isolated experiment before putting unfamiliar concepts into production architecture:
 
 1. Create the thing.
@@ -118,7 +120,7 @@ Create an isolated experiment before putting unfamiliar concepts into production
 5. Destroy or release it when relevant.
 6. Explain why the behavior occurred.
 
-Use the experiment as physical evidence for architectural decisions.
+Use the isolated experiment as physical evidence for architectural decisions. Transfer code to the main project object only after its behavior is fully understood.
 
 ---
 
