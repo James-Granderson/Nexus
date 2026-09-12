@@ -26,59 +26,40 @@ Ask and answer these questions before writing code. Verify them after writing co
 
 ### You Decide.
 
-The key mechanism behind rationale coding, and why it works, is the fact that you decide.
-When you "vibe code" or copy paste answers from Google or someone else, you are handing the decision off
-to someone else. 
 
-You are no longer in the driver seat. You lose control over what you were actually trying to implement.
-Take for example a fight. You wouldn't take a random weapon and head off with it into battle would you? You'd make the choice
-of taking a sword or knife yourself depending on your situation. That is rationale coding. You decide. You do it yourself. And 
-Eventually, you become wiser and sharper than any knife. You choose. You win.
+The mechanism behind why rationale coding works because you make the choice.
 
-The bad loop you get is:
-Question
-   ↓
-AI gives implementation
-   ↓
-Copy
-   ↓
-Compile
-   ↓
-Move on
+Vibe coding and blind copy-pasting delegates decisions to outside entities. When an LLM or an external source dictates an implementation, you hand off control of the architecture. You are no longer in the driver seat. You lose control over what you were actually trying to implement.
 
-Because the choice has disappeared.
+Take a fight as an example. You would not take a random weapon and head off into battle. You make the choice of taking a sword or knife yourself depending on your situation. That is rationale coding. You decide. You do it yourself. And eventually, you become wiser and sharper than any knife. You choose. You win.
 
-And then six months later you’ve got:
+The bad loop that leads to structural failure is:
 
-code you didn't choose
-+ abstractions you don't understand
-+ dependencies you don't remember
-+ conventions you never evaluated
-= decay
+Question → AI gives implementation → Copy → Compile → Move on
 
-The rationale loop should instead be:
+Because the choice has disappeared, six months later you have:
 
-PROBLEM
-   ↓
-WHAT ARE THE POSSIBLE MOVES?
-   ↓
-SEE WHAT EACH MOVE DOES
-   ↓
-UNDERSTAND THE CONSEQUENCES
-   ↓
-MAKE A CHOICE
-   ↓
-JUSTIFY THE CHOICE
-   ↓
-IMPLEMENT
-   ↓
-WATCH IT IN MOTION
-   ↓
-REALIZE
-   ↓
-KEEP / REJECT / REVISE
+*Code you did not choose*
 
-And AI belongs inside that process as a source of information and utility, not as the entity making the architectural choice.
+*Abstractions you do not understand*
+
+*Dependencies you do not remember*
+
+*Methods you never personally evaluated*
+
+This outcome is code decay. Code decay is not caused by bad syntax; it is caused by unevaluated choices.
+
+The rationale loop replaces passive copying with active engineering by forcing you through a sequence of deliberate decisions before code ever enters the architecture.
+
+It begins with the problem itself, stripped of syntax or framework assumptions. Rather than grabbing the first available answer, you identify the possible moves and see what each move does. This means mapping out your options and testing how each candidate approach interacts with system memory, state ownership, and execution flow.
+
+You then understand the consequences of those options—evaluating trade-offs in complexity, lifetime, and performance—so that when you make a choice, it is an intentional act of design rather than an accident of generation. You justify that choice by explicitly defining why this approach fits the physical model and what breaks if it is omitted.
+
+Only after this rationale is established do you implement the code. Once written, you watch it in motion, relying on direct execution traces, memory inspection, and machine output rather than theoretical assumptions. Seeing the machine run yourself allows you to realize the concept—verifying that the relationship between source code, objects, and runtime behavior is completely understood.
+
+Finally, based on physical evidence from execution rather than whether it simply compiled, you make the definitive call to keep, reject, or revise the code.
+
+Through this sequence, AI and external tools remain utility instruments that illuminate candidate moves, while the architectural authority stays entirely with you.
 
 
 
