@@ -128,7 +128,7 @@ A concept is learned when you can answer how the object operates in practice:
 
 | Question | Rationale | Result |
 | --- | --- | --- |
-| Does a player float? | No floor is defined, so 2D coordinate tracking is incomplete. | Add `z` |
+| Does a player float? | No, and no floor is defined, so 2D coordinate tracking is incomplete. | Add `z` |
 | Where is the floor? | The floor is the playing surface, not the building outer shell. | `Court.floor_z` |
 | What about the ceiling? | The ceiling is an arena property and rarely affects play state. | `Arena.ceiling_z` (optional) |
 | What is default player height? | The player stands directly on the court floor. | `Player.z` defaults to `Court.floor_z` |
